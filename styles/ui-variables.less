@@ -1,0 +1,306 @@
+// ===== Colours ======//
+@firefox-light: darken(#A3ACB1, 10%);
+@firefox-lighter: #EAEFF2;
+@firefox-dark: #6A7B86;
+@firefox-accent: #0095DD;
+@white: #ffffff;
+
+@nightly-blue: #002147;
+@firefox-orange: #E66000;
+@firefox-grey: #D4DDE4;
+
+// ===== Borders =====/
+@base-border-radius: 4px;
+
+// =======  UI Variables ======= //
+@accent-primary:         @firefox-light;
+@accent-primary-dark:    darken(@firefox-light, 20%);
+
+@background-secondary: @white;
+@text-color: @firefox-dark;
+@text-color-subtle: lighten(@firefox-dark, 20%);
+@text-color-very-subtle: @firefox-light;
+@text-color-inverse: @firefox-light;
+@text-color-inverse-subtle: darken(@firefox-light, 30%);
+@text-color-inverse-very-subtle: darken(@firefox-light, 20%);
+
+@panel-background-color: @nightly-blue;
+@toolbar-background-color: @firefox-grey;
+
+@btn-default-bg-color: @white;
+@btn-default-text-color: @firefox-light;
+@background-gradient: none;
+
+// ======= Sidebar ======== //
+#account-switcher .primary-item .name {
+  color: @firefox-dark;
+}
+
+.account-sidebar-sections {
+  background-color: @nightly-blue !important;
+
+  section {
+    .item-container {
+      margin: 0 10px !important;
+
+      .disclosure-triangle {
+        display: none;
+      }
+
+      .item {
+        padding: 0 10px !important;
+        color: @firefox-light !important;
+        cursor: pointer !important;
+
+        .item-count-box {
+          background: transparent !important;
+          color: @firefox-light !important;
+          box-shadow: 0 0.5px 0 @firefox-light, 0 -0.5px 0 @firefox-light, 0.5px 0 0 @firefox-light, -0.5px 0 0 @firefox-light !important;
+        }
+
+        &.selected {
+          background: @firefox-accent !important;
+          border-radius: @base-border-radius;
+          color: @white !important;
+
+          .item-count-box {
+            background: transparent !important;
+            color: @white !important;
+            box-shadow: 0 0.5px 0 @white, 0 -0.5px 0 @white, 0.5px 0 0 @white, -0.5px 0 0 @white !important;
+          }
+
+          .icon {
+            img {
+              background: @white !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ======= Threads ======== //
+.list-tabular .list-column.list-column-Item {
+  margin-left: -20px;
+  padding-left: 30px;
+}
+
+.thread-list {
+  .list-container {
+    .list-item {
+      &.focused:hover .list-column-HoverActions .inner {
+        color: @firefox-dark !important;
+        background-image: linear-gradient(90deg, fadeout(@firefox-lighter, 100%) 0%, darken(@firefox-accent, 100%) 100%);
+
+        .action {
+          -webkit-filter: none;
+        }
+        .thread-icon {
+          &:not(.thread-icon-star) {
+            opacity: 0.7;
+          }
+        }
+      }
+      &.focused {
+        .thread-icon, .mail-important-icon, .draft-icon {
+          -webkit-filter: none;
+        }
+      }
+      &:hover {
+        .thread-icon {
+          visibility: inherit;
+        }
+      }
+      .list-column {
+        border-bottom: 0 !important;
+      }
+    }
+    .scroll-region-content {
+      .scroll-region-content-inner {
+        .list-rows {
+          .list-item {
+            cursor: pointer !important;
+            box-sizing: border-box;
+            border: 0 !important;
+            background-color: @firefox-grey !important;
+            color: @firefox-dark !important;
+            &.focused {
+              color: @white !important;
+              background-color: @firefox-orange !important;
+            }
+            &.selected {
+              color: @firefox-dark !important;
+              background-color: darken(@firefox-lighter, 5%) !important;
+            }
+            &.keyboard-cursor {
+              .list-column-Item {
+                border-left: 4px solid darken(@firefox-lighter, 50%) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .thread-icon {
+    background-image: url(../static/images/thread-list/icon-star-hover-@2x.png);
+
+    &:not(.thread-icon-star) {
+      visibility: hidden;
+    }
+  }
+}
+
+// ====== Email frame =======//
+.ignore-in-parent-frame {
+  body {
+    color: @firefox-dark;
+  }
+  img {
+    color: @firefox-dark;
+  }
+}
+
+// ======== Controls ========= //
+
+.header-container {
+  margin-right: 10px;
+}
+
+/**
+ * Buttons
+ */
+.btn-toolbar, .token, .actions>.btn, .new-package>.btn, .appearance-mode-switch>.btn {
+  box-shadow: none !important;
+  background: @white !important;
+  border: 1px solid @firefox-light !important;
+  border-radius: @base-border-radius !important;
+  cursor: pointer !important;
+}
+
+.composer-action-bar-content {
+  .btn-toolbar {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+}
+
+body.platform-win32 {
+  .sheet-toolbar-container {
+    .btn-toolbar {
+      border: 0 !important;
+    }
+  }
+}
+
+.btn.btn-emphasis {
+  background-color: @firefox-accent !important;
+  border-color: @firefox-accent !important;
+  color: @white !important;
+
+  img.content-mask {
+    background-color: @white !important;
+  }
+}
+
+.button-dropdown.bordered {
+  .primary-item {
+    cursor: pointer !important;
+    box-shadow: none !important;
+    background: @white !important;
+    border: 1px solid @firefox-light !important;
+    border-top-left-radius: @base-border-radius !important;
+    border-bottom-left-radius: @base-border-radius !important;
+    img {
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .secondary-picker {
+    cursor: pointer !important;
+    box-shadow: none !important;
+    background: @white !important;
+    border: 1px solid @firefox-light !important;
+    border-top-right-radius: @base-border-radius !important;
+    border-bottom-right-radius: @base-border-radius !important;
+    margin-left: -1px !important;
+  }
+
+  .secondary-items {
+    .item  {
+      cursor: pointer;
+      color: @firefox-light !important;
+      background: @white !important;
+
+      .button-dropdown {
+        img {
+          background: @firefox-light  !important;
+        }
+      }
+    }
+  }
+}
+
+.sheet-toolbar .btn-toolbar {
+  height: 2em !important;
+  line-height: 1 !important;
+  margin-top: 6px !important;
+}
+
+/**
+ * Feedback button
+ */
+.btn-feedback {
+  background: @firefox-accent !important;
+  border: none !important;
+}
+
+/**
+ * Search bar
+ */
+.content-container {
+  .item.selected {
+    background: @firefox-light !important;
+    color: @white !important;
+  }
+}
+
+/**
+ * Dropdown
+ */
+.menu {
+  .item.selected {
+    background: @firefox-light !important;
+    .primary {
+      color: @white !important;
+    }
+    .secondary {
+      color: @firefox-lighter !important;
+    }
+  }
+}
+
+/**
+ * Plugin page
+ */
+.package {
+  border-radius: @base-border-radius;
+}
+
+/**
+ * Prefs page
+ */
+.appearance-mode {
+  cursor: pointer;
+
+  &.active {
+    background-color: lighten(@firefox-light, 30%) !important;
+  }
+}
+
+.scroll-region-content{
+  font-family: 'Fira Sans', sans-serif;
+}

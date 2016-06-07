@@ -1,0 +1,13 @@
+{
+  "name": "n1-firefox-theme",
+  "title": "",
+  "displayName": "",
+  "theme": "firefox-theme",
+  "version": "0.1.0",
+  "description": "",
+  "license": "GPL-3.0",
+  "engines": {
+    "nylas": "*"
+  },
+  "private": true
+}
