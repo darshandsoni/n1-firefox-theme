@@ -8,3 +8,4 @@ This theme uses the Taiga theme as a starting base. Thanks to noahbuscher for ex
 3. If you don't already have it, get the open-source [Fira Sans](https://www.google.com/fonts/specimen/Fira+Sans) font made for Firefox. - *This step is optional but recommended for good posterity.*
 4. Refresh N1, put your feet up and bask with the fox.
 
+![screen shot 2016-06-07 at 11 27 23 am](https://cloud.githubusercontent.com/assets/10469803/15870622/bd1a0924-2ca5-11e6-831e-9bf3c744fc82.png)
